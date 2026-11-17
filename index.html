@@ -156,10 +156,18 @@
     background:linear-gradient(180deg, rgba(201,162,39,.10), rgba(201,162,39,.03))}
   .sello .env{display:flex; align-items:center; justify-content:center; flex-wrap:wrap;
     gap:26px 40px; padding-block:26px; text-align:center}
-  .marcas-par{display:flex; align-items:center; gap:22px; flex:none}
-  .marcas-par img.lp{height:54px; width:auto}
-  .marcas-par img.cab{height:68px; width:auto}
-  .marcas-par .equis{color:var(--oro-hondo); font-family:var(--serif); font-size:26px; line-height:1}
+  .marcas-par{display:flex; align-items:center; gap:20px; flex:none}
+  .marcas-par img{display:block; width:auto; margin:0; object-fit:contain; align-self:center}
+  .marcas-par img.lp{height:58px}
+  .marcas-par img.csello{height:66px}
+  .marcas-par .equis{color:var(--oro-hondo); font-family:var(--serif); font-size:24px;
+    line-height:1; align-self:center; flex:none}
+  @media(max-width:520px){
+    .marcas-par{gap:14px}
+    .marcas-par img.lp{height:48px}
+    .marcas-par img.csello{height:55px}
+    .marcas-par .equis{font-size:20px}
+  }
   .sello .dicho{text-align:left; min-width:0; max-width:46ch}
   @media(max-width:700px){ .sello .dicho{text-align:center} }
   .sello .dicho b{display:block; font-family:var(--serif); font-weight:400;
@@ -315,7 +323,7 @@
     <div class="marcas-par">
       <img class="lp" src="./img/logo-monograma.png" alt="Los Pares 84×88">
       <span class="equis">×</span>
-      <img class="cab" src="./img/cab.png" alt="Certified Angus Beef" loading="lazy">
+      <img class="csello" src="./img/cab.png" alt="Certified Angus Beef" loading="lazy">
     </div>
     <div class="dicho">
       <b>Restaurante licenciado Certified Angus Beef</b>
