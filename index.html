@@ -47,7 +47,8 @@
     "opens": "08:00", "closes": "23:00"
   }],
   "paymentAccepted": "Efectivo, Transferencia, Tarjeta de crédito, Tarjeta de débito, American Express",
-  "sameAs": ["https://instagram.com/lospares8488"]
+  "acceptsReservations": true,
+  "sameAs": ["https://instagram.com/lospares8488", "https://www.facebook.com/people/Los-Pares-8488/100063714072571/"]
 }
 </script>
 
@@ -96,9 +97,9 @@
     border-bottom:1px solid var(--borde);
   }
   .barra .env{display:flex; align-items:center; justify-content:space-between; padding-block:14px; gap:16px}
-  .marca{font-family:var(--serif); font-size:20px; letter-spacing:.06em; text-decoration:none; white-space:nowrap}
-  .marca b{font-weight:500}
-  .marca span{color:var(--oro)}
+  .marca{display:flex; align-items:center; gap:11px; text-decoration:none; white-space:nowrap}
+  .marca img{height:34px; width:auto; opacity:.95}
+  .marca span{font-family:var(--serif); font-size:19px; letter-spacing:.07em}
   .nav{display:flex; gap:26px; font-size:13.5px; letter-spacing:.04em}
   .nav a{color:var(--tenue); text-decoration:none; transition:color .2s}
   .nav a:hover{color:var(--crema)}
@@ -116,12 +117,8 @@
     background:linear-gradient(180deg, rgba(12,11,10,.55) 0%, rgba(12,11,10,.35) 38%, rgba(12,11,10,.94) 100%);
   }
   .portada .env{position:relative; z-index:2; padding-block:70px 72px}
-  .portada h1{
-    font-family:var(--serif); font-weight:400;
-    font-size:clamp(44px,9vw,92px); line-height:.98; margin:0 0 6px;
-    letter-spacing:-.01em;
-  }
-  .portada h1 em{font-style:normal; color:var(--oro)}
+  .portada h1{margin:0 0 14px}
+  .portada h1 img{width:min(520px,78vw); height:auto}
   .lema{font-family:var(--serif); font-size:clamp(19px,3vw,26px); color:var(--crema); opacity:.9; margin:0 0 6px}
   .lugar{
     font-size:12px; letter-spacing:.24em; text-transform:uppercase;
@@ -243,6 +240,37 @@
     font-size:12px; color:#6B635A;
   }
 
+
+  /* ---------- el lugar / invitacion ---------- */
+  .lugar-sec{background:var(--carbon); border-block:1px solid var(--borde)}
+  .ocasiones{display:grid; gap:18px; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); margin-top:34px}
+  .ocasion{
+    background:var(--panel); border:1px solid var(--borde); border-radius:3px;
+    padding:28px 24px; min-width:0;
+  }
+  .ocasion h3{font-family:var(--serif); font-size:25px; font-weight:500; margin:0 0 8px}
+  .ocasion p{margin:0; font-size:14.5px; color:var(--tenue)}
+  .invita{
+    margin-top:38px; padding:34px 30px; text-align:center;
+    border:1px solid var(--oro-hondo); border-radius:3px;
+    background:linear-gradient(180deg, rgba(201,162,39,.07), rgba(201,162,39,.02));
+  }
+  .invita h3{font-family:var(--serif); font-size:clamp(25px,4vw,34px); font-weight:400; margin:0 0 8px}
+  .invita p{margin:0 auto 22px; color:var(--tenue); max-width:52ch; font-size:15px}
+
+  /* ---------- redes ---------- */
+  .redes{display:grid; gap:18px; grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+  .red{
+    display:flex; align-items:center; gap:16px; text-decoration:none;
+    background:var(--panel); border:1px solid var(--borde); border-radius:3px;
+    padding:22px 24px; transition:border-color .2s, background .2s; min-width:0;
+  }
+  .red:hover{border-color:var(--oro-hondo); background:var(--carbon)}
+  .red svg{width:26px; height:26px; flex:none; fill:var(--oro)}
+  .red b{display:block; font-weight:500; font-size:15.5px; margin-bottom:2px}
+  .red span{font-size:13.5px; color:var(--tenue)}
+  .pie-logo{width:190px; height:auto; margin-bottom:16px; opacity:.92}
+
   .flota{
     position:fixed; right:18px; bottom:18px; z-index:60;
     right:max(18px, env(safe-area-inset-right, 0px));
@@ -265,11 +293,12 @@
 
 <div class="barra">
   <div class="env">
-    <a class="marca" href="#"><b>LOS PARES</b> <span>84×88</span></a>
+    <a class="marca" href="#"><img src="./img/logo-monograma.png" alt="Los Pares 84×88"><span>LOS PARES 84×88</span></a>
     <nav class="nav">
       <a href="#especialidades">Especialidades</a>
       <a href="#cartas">Cartas</a>
       <a href="#boutique">Boutique</a>
+      <a href="#el-lugar">El lugar</a>
       <a href="#visitanos">Visítanos</a>
     </nav>
   </div>
@@ -278,12 +307,12 @@
 <header class="portada">
   <div class="env">
     <p class="eyebrow">Parrilla y cortes premium</p>
-    <h1>Los Pares <em>84×88</em></h1>
+    <h1><img src="./img/logo-palabra.png" alt="Los Pares 84×88" width="1400" height="535" fetchpriority="high"></h1>
     <p class="lema">La carne, como debe ser.</p>
     <p class="lugar">San Juan Bautista Tuxtepec · Oaxaca</p>
     <div class="botones">
-      <a class="btn btn-oro" href="https://menu.lospares.com/">Ver la carta</a>
-      <a class="btn btn-linea" href="https://wa.me/522878818488">Escríbenos por WhatsApp</a>
+      <a class="btn btn-oro" href="https://wa.me/522878818488?text=Hola%2C%20quiero%20reservar%20una%20mesa%20en%20Los%20Pares">Reservar mesa</a>
+      <a class="btn btn-linea" href="https://menu.lospares.com/">Ver la carta</a>
     </div>
   </div>
 </header>
@@ -431,6 +460,62 @@
   </div>
 </section>
 
+
+<section id="el-lugar" class="lugar-sec">
+  <div class="env">
+    <div class="cab">
+      <p class="eyebrow">El lugar</p>
+      <h2>Aquí se celebra</h2>
+      <p class="sub">Somos el restaurante de carnes de Tuxtepec. Un salón para una cena de dos, y también para la posada de toda la oficina.</p>
+    </div>
+
+    <div class="ocasiones">
+      <div class="ocasion">
+        <h3>Posadas y fiestas de fin de año</h3>
+        <p>Tenemos el espacio y el menú para grupos. Aparta con tiempo: diciembre se llena.</p>
+      </div>
+      <div class="ocasion">
+        <h3>Cenas y celebraciones</h3>
+        <p>Cumpleaños, aniversarios o un buen corte sin pretexto. Te armamos el menú.</p>
+      </div>
+      <div class="ocasion">
+        <h3>Reuniones en familia</h3>
+        <p>Desayunos de domingo, comidas largas. Abrimos desde las 8 de la mañana.</p>
+      </div>
+    </div>
+
+    <div class="invita">
+      <h3>Ven a comer con nosotros</h3>
+      <p>Reserva tu mesa por WhatsApp. Dinos el día, la hora y cuántos son, y te confirmamos.</p>
+      <a class="btn btn-oro" href="https://wa.me/522878818488?text=Hola%2C%20quiero%20reservar%20una%20mesa%20en%20Los%20Pares.%20Somos%20____%20personas%2C%20para%20el%20d%C3%ADa%20____%20a%20las%20____">Reservar por WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<section id="redes">
+  <div class="env">
+    <div class="cab">
+      <p class="eyebrow">Síguenos</p>
+      <h2>Lo que sale de la parrilla</h2>
+      <p class="sub">Promociones, platillos del día y lo que estamos preparando. Ahí nos escribes también.</p>
+    </div>
+    <div class="redes">
+      <a class="red" href="https://instagram.com/lospares8488">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.9.07 1.2.05 1.8.25 2.2.42.6.22 1 .48 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c0 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2 0-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c0-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4C8.4 2.2 8.8 2.2 12 2.2m0 2.1c-3.1 0-3.5 0-4.7.07-1.1.05-1.7.24-2.1.4-.5.2-.9.44-1.2.8-.4.3-.6.7-.8 1.2-.2.4-.4 1-.4 2.1C2.7 8.5 2.7 8.9 2.7 12s0 3.5.1 4.7c0 1.1.2 1.7.4 2.1.2.5.4.9.8 1.2.3.4.7.6 1.2.8.4.2 1 .4 2.1.4 1.2.1 1.6.1 4.7.1s3.5 0 4.7-.1c1.1 0 1.7-.2 2.1-.4.5-.2.9-.4 1.2-.8.4-.3.6-.7.8-1.2.2-.4.4-1 .4-2.1.1-1.2.1-1.6.1-4.7s0-3.5-.1-4.7c0-1.1-.2-1.7-.4-2.1-.2-.5-.4-.9-.8-1.2-.3-.4-.7-.6-1.2-.8-.4-.2-1-.4-2.1-.4-1.2-.07-1.6-.07-4.7-.07zm0 3.4a4.3 4.3 0 1 1 0 8.6 4.3 4.3 0 0 1 0-8.6zm0 7.1a2.8 2.8 0 1 0 0-5.6 2.8 2.8 0 0 0 0 5.6zm5.5-7.3a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/></svg>
+        <span><b>Instagram</b><span>@lospares8488</span></span>
+      </a>
+      <a class="red" href="https://www.facebook.com/people/Los-Pares-8488/100063714072571/">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.3v7A10 10 0 0 0 22 12z"/></svg>
+        <span><b>Facebook</b><span>Los Pares 84/88</span></span>
+      </a>
+      <a class="red" href="https://wa.me/522878818488">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.5 15.2L2 22l4.9-1.5A10 10 0 1 0 12 2zm0 1.9a8.1 8.1 0 1 1-4.3 14.9l-.3-.2-2.9.9.9-2.8-.2-.3A8.1 8.1 0 0 1 12 3.9zm4.6 10.4c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.6.1-.2.2-.6.8-.8 1-.1.1-.3.2-.5.1a6.6 6.6 0 0 1-3.3-2.9c-.1-.3 0-.4.1-.5l.4-.5c.1-.2.2-.3.2-.5v-.4c0-.1-.6-1.4-.8-1.9-.2-.4-.4-.4-.5-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.6 1 2.7c.1.2 1.8 2.8 4.4 3.9 1.6.7 2.2.7 3 .6.5 0 1.4-.6 1.6-1.1.2-.6.2-1 .1-1.1l-.6-.3z"/></svg>
+        <span><b>WhatsApp</b><span>287 881 8488</span></span>
+      </a>
+    </div>
+  </div>
+</section>
+
 <section id="visitanos">
   <div class="env">
     <div class="cab">
@@ -478,7 +563,7 @@
   <div class="env">
     <div class="pie">
       <div>
-        <p class="nombre">Los Pares 84×88</p>
+        <img class="pie-logo" src="./img/logo-palabra.png" alt="Los Pares 84×88">
         <p>Parrilla y cortes premium en San Juan Bautista Tuxtepec, Oaxaca.</p>
         <p>Víctor Bravo Ahuja, Calle 19<br>C.P. 68370, Tuxtepec, Oaxaca, México</p>
         <p>Tel. y WhatsApp: +52 287 881 8488</p>
@@ -494,6 +579,7 @@
         <h4>Contacto</h4>
         <a href="https://wa.me/522878818488">WhatsApp</a>
         <a href="https://instagram.com/lospares8488">Instagram</a>
+        <a href="https://www.facebook.com/people/Los-Pares-8488/100063714072571/">Facebook</a>
         <a href="https://factura.lospares.com/">Facturación</a>
       </div>
     </div>
