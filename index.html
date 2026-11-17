@@ -29,7 +29,7 @@
   "servesCuisine":["Cortes premium","Parrilla","Mariscos","Mexicana"],
   "priceRange":"$$$","telephone":"+52 287 881 8488",
   "hasMenu":"https://menu.lospares.com/","acceptsReservations":true,
-  "address":{"@type":"PostalAddress","streetAddress":"Víctor Bravo Ahuja, Calle 19","addressLocality":"San Juan Bautista Tuxtepec","addressRegion":"Oaxaca","postalCode":"68370","addressCountry":"MX"},
+  "address":{"@type":"PostalAddress","streetAddress":"Calzada Víctor Bravo Ahuja 4A, Fraccionamiento Los Ángeles","addressLocality":"San Juan Bautista Tuxtepec","addressRegion":"Oaxaca","postalCode":"68370","addressCountry":"MX"},
   "geo":{"@type":"GeoCoordinates","latitude":18.09577251,"longitude":-96.13677288},
   "openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"08:00","closes":"23:00"}],
   "paymentAccepted":"Efectivo, Transferencia, Tarjeta de crédito, Tarjeta de débito, American Express",
@@ -281,8 +281,12 @@
   @media(max-width:900px) and (pointer:coarse){
     .pie a{padding-block:11px; margin:0; min-height:44px; display:flex; align-items:center}
     .dato a{display:inline-flex; align-items:center; min-height:40px}
+    .legal a{display:inline-flex; align-items:center; min-height:40px; padding-inline:2px}
     .barra .marca{min-height:44px; display:inline-flex; align-items:center}
   }
+  .legal b{font-weight:500; color:var(--tenue)}
+  .legal a{color:var(--tenue); text-decoration:none; border-bottom:1px solid var(--borde)}
+  .legal a:hover{color:var(--oro-claro); border-color:var(--oro-hondo)}
   .legal{border-top:1px solid var(--borde); margin-top:42px; padding-top:24px;
     display:flex; flex-wrap:wrap; gap:8px 26px; justify-content:space-between; font-size:12px; color:var(--tenue2)}
 
@@ -598,8 +602,8 @@
     <div class="mapa-caja">
       <iframe title="Mapa de Los Pares 84×88" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
         src="https://maps.google.com/maps?q=18.09577251,-96.13677288&amp;z=16&amp;output=embed"></iframe>
-      <a class="liga" href="https://maps.google.com/maps?q=Los%2BPares%2BV%C3%ADctor%2BBravo%2BAhuja%2BCalle%2B19%2C%2BSan%2BJuan%2BBautista%2BTuxtepec%2C%2B68370%2C%2BOax%2C%2BMX&amp;sll=18.09577251,-96.13677288">
-        <p class="dir">Víctor Bravo Ahuja, Calle 19<br>San Juan Bautista Tuxtepec, Oaxaca · C.P. 68370</p>
+      <a class="liga" href="https://maps.google.com/maps?q=18.09577251,-96.13677288">
+        <p class="dir">Calzada Víctor Bravo Ahuja 4A, esq. Calle 19<br>Fracc. Los Ángeles · San Juan Bautista Tuxtepec, Oaxaca · C.P. 68370</p>
         <span class="ver-mapa">Cómo llegar →</span>
       </a>
     </div>
@@ -618,7 +622,7 @@
       <div>
         <img class="pie-logo" src="./img/logo-palabra.png" alt="Los Pares 84×88">
         <p>Steakhouse y boutique de carnes en San Juan Bautista Tuxtepec, Oaxaca.</p>
-        <p>Víctor Bravo Ahuja, Calle 19<br>C.P. 68370, Tuxtepec, Oaxaca, México</p>
+        <p>Calzada Víctor Bravo Ahuja 4A, esq. Calle 19<br>Fracc. Los Ángeles, C.P. 68370<br>San Juan Bautista Tuxtepec, Oaxaca, México</p>
         <p>Tel. y WhatsApp: +52 287 881 8488</p>
       </div>
       <div><h4>El restaurante</h4>
@@ -633,8 +637,13 @@
         <a href="https://factura.lospares.com/">Facturación</a></div>
     </div>
     <div class="legal">
-      <span>© 2026 Los Pares 84×88 · Tuxtepec, Oaxaca, México</span>
-      <span>Precios en pesos mexicanos, IVA incluido. Sujetos a cambio sin previo aviso.</span>
+      <span>© 2026 <b>Carla Argüello Hernández</b>, que opera bajo el nombre comercial
+        <b>Los Pares 84×88</b> · RFC AUHC8806083I9<br>
+        Calzada Víctor Bravo Ahuja 4A, Fracc. Los Ángeles, C.P. 68370,
+        San Juan Bautista Tuxtepec, Oaxaca, México</span>
+      <span>Precios en pesos mexicanos, IVA incluido. Sujetos a cambio sin previo aviso.<br>
+        <a href="https://factura.lospares.com/privacidad.html">Aviso de privacidad</a> ·
+        <a href="https://factura.lospares.com/">Facturación electrónica</a></span>
     </div>
   </div>
 </footer>
