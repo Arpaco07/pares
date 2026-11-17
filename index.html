@@ -165,17 +165,18 @@
   .precio{font-size:15px; font-weight:500; color:var(--oro-claro); font-variant-numeric:tabular-nums; margin-top:8px}
 
   /* cartas */
-  .cartas{display:grid; gap:20px; grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+  .cartas{display:grid; gap:20px; grid-template-columns:repeat(4,1fr)}
+  @media(max-width:980px){ .cartas{grid-template-columns:1fr 1fr} }
+  @media(max-width:520px){ .cartas{grid-template-columns:1fr} }
   .carta{position:relative; display:block; text-decoration:none; border:1px solid var(--borde);
-    overflow:hidden; aspect-ratio:3/4; min-width:0}
-  @media(max-width:560px){ .carta{aspect-ratio:16/9} }
+    overflow:hidden; aspect-ratio:4/3; min-width:0}
   .carta img{width:100%; height:100%; object-fit:cover; transition:transform .6s}
   .carta:hover img{transform:scale(1.06)}
-  .carta .capa{position:absolute; inset:0; z-index:2; padding:24px; display:flex;
+  .carta .capa{position:absolute; inset:0; z-index:2; padding:20px; display:flex;
     flex-direction:column; justify-content:flex-end;
-    background:linear-gradient(180deg,rgba(10,9,8,.05) 28%,rgba(10,9,8,.93) 100%)}
+    background:linear-gradient(180deg,rgba(10,9,8,.08) 24%,rgba(10,9,8,.95) 100%)}
   .carta .num{font-family:var(--serif); font-size:13px; color:var(--oro); letter-spacing:.24em; margin-bottom:7px}
-  .carta h3{font-family:var(--serif); font-size:29px; font-weight:400; margin:0 0 3px}
+  .carta h3{font-family:var(--serif); font-size:26px; font-weight:400; margin:0 0 3px}
   .carta .pie-c{font-size:12.5px; color:var(--tenue)}
 
   /* boutique */
@@ -477,13 +478,13 @@
       <p class="sub">Con foto de cada platillo. Se abre en el celular, sin descargar nada.</p>
     </div>
     <div class="cartas">
-      <a class="carta" href="https://menu.lospares.com/"><img src="https://menu.lospares.com/fotos/carta-desayuno.jpg" alt="Carta de desayunos" loading="lazy">
+      <a class="carta" href="https://menu.lospares.com/#desayunos"><img src="https://menu.lospares.com/fotos/carta-desayuno.jpg" alt="Carta de desayunos" loading="lazy">
         <span class="capa"><span class="num">I</span><h3>Desayunos</h3><span class="pie-c">Hasta la 1:00 pm</span></span></a>
-      <a class="carta" href="https://menu.lospares.com/"><img src="https://menu.lospares.com/fotos/carta-comida.jpg" alt="Carta de comida" loading="lazy">
+      <a class="carta" href="https://menu.lospares.com/#comida"><img src="https://menu.lospares.com/fotos/carta-comida.jpg" alt="Carta de comida" loading="lazy">
         <span class="capa"><span class="num">II</span><h3>Comida</h3><span class="pie-c">Parrilla, mariscos y más</span></span></a>
-      <a class="carta" href="https://menu.lospares.com/"><img src="https://menu.lospares.com/fotos/carta-bebidas.jpg" alt="Carta de bebidas" loading="lazy">
+      <a class="carta" href="https://menu.lospares.com/#bebidas"><img src="https://menu.lospares.com/fotos/carta-bebidas.jpg" alt="Carta de bebidas" loading="lazy">
         <span class="capa"><span class="num">III</span><h3>Bebidas</h3><span class="pie-c">Coctelería, mezcales y vinos</span></span></a>
-      <a class="carta" href="https://menu.lospares.com/"><img src="https://menu.lospares.com/fotos/carta-boutique.jpg" alt="Carta de la boutique" loading="lazy">
+      <a class="carta" href="https://menu.lospares.com/#boutique"><img src="https://menu.lospares.com/fotos/carta-boutique.jpg" alt="Carta de la boutique" loading="lazy">
         <span class="capa"><span class="num">IV</span><h3>Boutique</h3><span class="pie-c">Cortes para llevar</span></span></a>
     </div>
   </div>
