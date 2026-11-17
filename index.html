@@ -277,6 +277,12 @@
   .pie p, .pie a{font-size:14px; color:var(--tenue); margin:0 0 8px; text-decoration:none; display:block}
   .pie a:hover{color:var(--crema)}
   .pie-logo{width:200px; height:auto; margin-bottom:18px}
+  /* dedo: en celular los enlaces necesitan area para tocarse sin fallar */
+  @media(max-width:900px) and (pointer:coarse){
+    .pie a{padding-block:11px; margin:0; min-height:44px; display:flex; align-items:center}
+    .dato a{display:inline-flex; align-items:center; min-height:40px}
+    .barra .marca{min-height:44px; display:inline-flex; align-items:center}
+  }
   .legal{border-top:1px solid var(--borde); margin-top:42px; padding-top:24px;
     display:flex; flex-wrap:wrap; gap:8px 26px; justify-content:space-between; font-size:12px; color:var(--tenue2)}
 
