@@ -13,7 +13,7 @@
 <meta property="og:title" content="Los Pares 84×88 — Steakhouse en Tuxtepec, Oaxaca">
 <meta property="og:description" content="Cortes premium y parrilla. Reserva tu mesa en línea. Todos los días de 8:00 am a 11:00 pm.">
 <meta property="og:url" content="https://lospares.com/">
-<meta property="og:image" content="https://menu.lospares.com/og.jpg">
+<meta property="og:image" content="https://lospares.com/img/fachada.jpg">
 <meta property="og:locale" content="es_MX">
 <meta name="twitter:card" content="summary_large_image">
 
@@ -25,7 +25,7 @@
 {
   "@context":"https://schema.org","@type":"Restaurant",
   "name":"Los Pares 84×88","url":"https://lospares.com/",
-  "image":"https://menu.lospares.com/og.jpg",
+  "image":"https://lospares.com/img/fachada.jpg",
   "servesCuisine":["Cortes premium","Parrilla","Mariscos","Mexicana"],
   "priceRange":"$$$","telephone":"+52 287 881 8488",
   "hasMenu":"https://menu.lospares.com/","acceptsReservations":true,
@@ -86,10 +86,15 @@
   .portada{position:relative; min-height:min(92vh,820px); display:flex;
     flex-direction:column; justify-content:center; overflow:hidden; text-align:center}
   .portada::before{content:""; position:absolute; inset:0;
-    background:url("https://menu.lospares.com/fotos/portada.jpg") center/cover no-repeat; transform:scale(1.05)}
+    background:url("./img/fachada.jpg") center 72%/cover no-repeat; transform:scale(1.04)}
   .portada::after{content:""; position:absolute; inset:0;
-    background:radial-gradient(ellipse at 50% 45%, rgba(10,9,8,.35) 0%, rgba(10,9,8,.72) 55%, rgba(10,9,8,.97) 100%)}
+    background:linear-gradient(180deg, rgba(10,9,8,.72) 0%, rgba(10,9,8,.5) 32%, rgba(10,9,8,.86) 72%, rgba(10,9,8,.99) 100%)}
   .portada .env{position:relative; z-index:2; padding-block:92px 56px}
+  @media(max-width:720px){
+    .portada{min-height:min(64vh,560px)}
+    .portada::before{background-position:center 84%}
+    .portada .env{padding-block:56px 40px}
+  }
   .portada .eyebrow{color:var(--oro-claro); opacity:.9}
   .portada h1{margin:0 auto 20px}
   .portada h1 img{width:min(560px,82vw); height:auto; margin:0 auto}
@@ -174,7 +179,7 @@
   .carta .pie-c{font-size:12.5px; color:var(--tenue)}
 
   /* boutique */
-  .boutique{background:var(--carbon); border-block:1px solid var(--borde)}
+  .boutique{background:var(--negro); border-block:1px solid var(--borde)}
   .bq{display:grid; gap:44px; grid-template-columns:1fr 1fr; align-items:center}
   @media(max-width:860px){ .bq{grid-template-columns:1fr} }
   .bq-fotos{display:grid; grid-template-columns:1fr 1fr; gap:10px; min-width:0}
@@ -190,6 +195,24 @@
   .ocasion{background:var(--panel); border:1px solid var(--borde); padding:32px 26px; min-width:0}
   .ocasion h3{font-family:var(--serif); font-size:25px; font-weight:400; margin:0 0 9px}
   .ocasion p{margin:0; font-size:14.5px; color:var(--tenue)}
+
+  /* el lugar */
+  .lugar-tira{width:100%; aspect-ratio:21/9; object-fit:cover; border:1px solid var(--borde)}
+  @media(max-width:700px){ .lugar-tira{aspect-ratio:16/10} }
+  .espacios{display:grid; gap:26px; grid-template-columns:1fr 1fr; margin-top:26px}
+  @media(max-width:860px){ .espacios{grid-template-columns:1fr} }
+  .espacio{background:var(--panel); border:1px solid var(--borde); overflow:hidden;
+    display:flex; flex-direction:column; min-width:0}
+  .espacio img{width:100%; aspect-ratio:16/9; object-fit:cover}
+  .espacio .cuerpo{padding:26px 26px 28px; display:flex; flex-direction:column; flex:1}
+  .espacio h3{font-family:var(--serif); font-weight:400; font-size:28px; margin:0 0 8px}
+  .espacio p{margin:0 0 18px; font-size:14.5px; color:var(--tenue); flex:1}
+  .rasgos{display:flex; flex-wrap:wrap; gap:8px; margin:0; padding:0; list-style:none}
+  .rasgos li{font-size:11px; letter-spacing:.13em; text-transform:uppercase;
+    color:var(--oro-claro); border:1px solid var(--oro-hondo); border-radius:2px; padding:6px 11px}
+  .galeria{display:grid; gap:10px; grid-template-columns:repeat(4,1fr); margin-top:26px}
+  @media(max-width:760px){ .galeria{grid-template-columns:1fr 1fr} }
+  .galeria img{width:100%; aspect-ratio:1; object-fit:cover; border:1px solid var(--borde); min-width:0}
 
   /* redes */
   .redes{display:grid; gap:20px; grid-template-columns:repeat(auto-fit,minmax(252px,1fr))}
@@ -331,7 +354,63 @@
   </div>
 </div>
 
-<section id="parrilla">
+
+<section id="el-lugar">
+  <div class="env">
+    <div class="cab">
+      <div class="filo"></div>
+      <p class="eyebrow">El lugar</p>
+      <h2>Aquí se celebra</h2>
+      <p class="sub">Una cena de dos o la posada de toda la oficina. El salón da para las dos cosas, y el privado para cuando quieres que nadie los interrumpa.</p>
+    </div>
+
+    <img class="lugar-tira" src="./img/salon-1.jpg" alt="Salón de Los Pares 84×88" loading="lazy">
+
+    <div class="espacios">
+      <article class="espacio">
+        <img src="./img/salon-3.jpg" alt="El salón, con las mesas de madera y el área de niños" loading="lazy">
+        <div class="cuerpo">
+          <h3>El salón</h3>
+          <p>Techos altos, mesas de madera maciza y el área de niños a la vista, para que coman tranquilos mientras tú comes en paz. Las pantallas están puestas para el partido.</p>
+          <ul class="rasgos">
+            <li>Área de niños</li><li>Pantallas</li><li>Terraza</li><li>Aire acondicionado</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="espacio">
+        <img src="./img/privado-1.jpg" alt="Área privada con mesa larga de madera" loading="lazy">
+        <div class="cuerpo">
+          <h3>El privado</h3>
+          <p>Un salón aparte, con su propia puerta y una sola mesa larga. Para la comida de trabajo, la posada de la oficina o la cena que no quieres compartir con nadie más.</p>
+          <ul class="rasgos">
+            <li>Hasta 16 personas</li><li>Pantalla propia</li><li>Puerta aparte</li>
+          </ul>
+        </div>
+      </article>
+    </div>
+
+    <div class="galeria">
+      <img src="./img/privado-2.jpg" alt="El privado desde la cabecera" loading="lazy">
+      <img src="./img/barra.jpg" alt="La barra" loading="lazy">
+      <img src="./img/ambiente.jpg" alt="El ambiente de noche" loading="lazy">
+      <img src="./img/salon-2.jpg" alt="El salón de noche" loading="lazy">
+    </div>
+
+    <div class="ocasiones" style="margin-top:34px">
+      <div class="ocasion"><h3>Posadas y fin de año</h3><p>Aparta con tiempo: diciembre se llena. Pregunta por los paquetes para grupos.</p></div>
+      <div class="ocasion"><h3>Cenas y celebraciones</h3><p>Cumpleaños, aniversarios o un buen corte sin pretexto.</p></div>
+      <div class="ocasion"><h3>Comidas de trabajo</h3><p>El privado, para cuando la conversación importa tanto como la comida.</p></div>
+      <div class="ocasion"><h3>Domingos en familia</h3><p>Desayunos largos desde las ocho. Los niños tienen dónde jugar.</p></div>
+    </div>
+
+    <div style="margin-top:34px; text-align:center">
+      <a class="btn btn-oro" href="#reservar">Apartar el lugar</a>
+    </div>
+  </div>
+</section>
+
+<section id="parrilla" style="background:var(--carbon); border-block:1px solid var(--borde)">
   <div class="env">
     <div class="cab">
       <div class="filo"></div>
@@ -360,7 +439,7 @@
   </div>
 </section>
 
-<section id="especialidades" style="background:var(--carbon); border-block:1px solid var(--borde)">
+<section id="especialidades">
   <div class="env">
     <div class="cab">
       <div class="filo"></div>
@@ -389,7 +468,7 @@
   </div>
 </section>
 
-<section id="cartas">
+<section id="cartas" style="background:var(--carbon); border-block:1px solid var(--borde)">
   <div class="env">
     <div class="cab">
       <div class="filo"></div>
@@ -433,23 +512,6 @@
         <li>Picaña Prime · Picaña CAB · Arrachera <span>por peso</span></li>
       </ul>
       <a class="btn btn-linea" href="https://wa.me/522878818488?text=Hola%2C%20quiero%20preguntar%20por%20los%20cortes%20de%20la%20boutique">Precio y disponibilidad del día</a>
-    </div>
-  </div>
-</section>
-
-<section id="el-lugar">
-  <div class="env">
-    <div class="cab">
-      <div class="filo"></div>
-      <p class="eyebrow">El lugar</p>
-      <h2>Aquí se celebra</h2>
-      <p class="sub">Una cena de dos o la posada de toda la oficina. El salón da para las dos cosas, y el privado para cuando quieres que nadie los interrumpa.</p>
-    </div>
-    <div class="ocasiones">
-      <div class="ocasion"><h3>Posadas y fin de año</h3><p>Tenemos espacio y menú para grupos. Aparta con tiempo: diciembre se llena.</p></div>
-      <div class="ocasion"><h3>Cenas y celebraciones</h3><p>Cumpleaños, aniversarios o un buen corte sin pretexto. Te armamos el menú.</p></div>
-      <div class="ocasion"><h3>Comidas de trabajo</h3><p>El privado, para cuando la conversación importa tanto como la comida.</p></div>
-      <div class="ocasion"><h3>Domingos en familia</h3><p>Desayunos largos desde las ocho. Los niños también comen bien aquí.</p></div>
     </div>
   </div>
 </section>
