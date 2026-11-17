@@ -178,6 +178,7 @@
     border:1px solid var(--borde); border-radius:3px; overflow:hidden;
     aspect-ratio:3/4; min-width:0;
   }
+  @media(max-width:560px){ .carta{aspect-ratio:16/9} }
   .carta img{width:100%; height:100%; object-fit:cover; transition:transform .5s}
   .carta:hover img{transform:scale(1.05)}
   .carta .capa{
@@ -218,8 +219,8 @@
     border-top:1px solid var(--borde); transition:background .2s;
   }
   .mapa-caja a.liga:hover{background:var(--carbon)}
-  .mapa-foto{aspect-ratio:21/9; background:url("https://menu.lospares.com/fotos/corte-rib-eye.jpg") center/cover}
-  @media(max-width:620px){ .mapa-foto{aspect-ratio:16/10} }
+  .mapa-foto{aspect-ratio:21/9; border:0; width:100%; display:block; filter:grayscale(.25) contrast(1.05)}
+  @media(max-width:620px){ .mapa-foto{aspect-ratio:4/3} }
   .dir{font-family:var(--serif); font-size:clamp(21px,3.4vw,27px); margin:0 0 6px; line-height:1.3}
   .ver-mapa{color:var(--oro-claro); font-size:13px; letter-spacing:.12em; text-transform:uppercase}
 
@@ -438,7 +439,7 @@
     </div>
 
     <div class="mapa-caja">
-      <div class="mapa-foto" role="img" aria-label="Corte a la parrilla"></div>
+      <iframe class="mapa-foto" title="Mapa de Los Pares 84×88 en Tuxtepec, Oaxaca" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=18.09577251,-96.13677288&amp;z=16&amp;output=embed"></iframe>
       <a class="liga" href="https://maps.google.com/maps?q=Los%2BPares%2BV%C3%ADctor%2BBravo%2BAhuja%2BCalle%2B19%2C%2BSan%2BJuan%2BBautista%2BTuxtepec%2C%2B68370%2C%2BOax%2C%2BMX&amp;sll=18.09577251,-96.13677288">
         <p class="dir">Víctor Bravo Ahuja, Calle 19<br>San Juan Bautista Tuxtepec, Oaxaca · C.P. 68370</p>
         <span class="ver-mapa">Cómo llegar →</span>
